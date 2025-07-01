@@ -16,8 +16,22 @@
   ];
 
   # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot = {
+    enable = true;
+    # We don't neet too many versions of config
+    configurationLimit = 10;
+  };
   boot.loader.efi.canTouchEfiVariables = true;
+
+  # Nix garbage collection
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 1w";
+  };
+
+  # Automatically optimise storage
+  nix.settings.auto-optimise-store = true;
 
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
