@@ -1,11 +1,15 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   home.username = "nixos";
   home.homeDirectory = "/home/nixos";
 
   home.packages = with pkgs; [
+    bat
     btop
+    fastfetch
   ];
 
   programs.nushell = {
@@ -20,6 +24,12 @@
         show_banner: false
       }
     '';
+  };
+
+  programs.git = {
+    enable = true;
+    userName = "changsun20";
+    userEmail = "110759360+changsun20@users.noreply.github.com";
   };
 
   home.stateVersion = "25.05";
