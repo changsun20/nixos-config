@@ -10,6 +10,10 @@
     bat
     btop
     fastfetch
+
+    # Clojure
+    clojure
+    rlwrap
   ];
 
   programs.nushell = {
