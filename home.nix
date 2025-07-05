@@ -10,6 +10,7 @@
     bat
     btop
     fastfetch
+    helix
 
     # Clojure
     clojure
