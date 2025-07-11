@@ -11,10 +11,6 @@
     btop
     fastfetch
     helix
-
-    # Clojure
-    clojure
-    rlwrap
   ];
 
   programs.nushell = {
@@ -29,6 +25,16 @@
         show_banner: false
       }
     '';
+  };
+
+  programs.helix = {
+    enable = true;
+    settings = {
+      theme = "tokyonight";
+      editor = {line-number = "relative";};
+      editor.file-picker = {hidden = false;};
+      editor.lsp = {display-messages = true;};
+    };
   };
 
   programs.git = {
