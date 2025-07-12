@@ -11,6 +11,11 @@
     btop
     fastfetch
     helix
+    xh
+    sbcl
+    rlwrap
+    gnupg1
+    openssl
   ];
 
   programs.nushell = {
