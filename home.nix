@@ -7,15 +7,15 @@
   home.homeDirectory = "/home/nixos";
 
   home.packages = with pkgs; [
-    bat
-    btop
+    # bat
+    # btop
     fastfetch
     helix
-    xh
-    sbcl
-    rlwrap
-    gnupg1
-    openssl
+    # xh
+    # sbcl
+    # rlwrap
+    # gnupg1
+    # openssl
   ];
 
   programs.nushell = {

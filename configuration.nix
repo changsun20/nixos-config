@@ -74,28 +74,28 @@
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
 
-  # SSH
-  services.openssh = {
-    enable = true;
-    settings = {
-      PermitRootLogin = "no";
-      PasswordAuthentication = false;
-    };
-  };
+  # # SSH
+  # services.openssh = {
+  #   enable = true;
+  #   settings = {
+  #     PermitRootLogin = "no";
+  #     PasswordAuthentication = false;
+  #   };
+  # };
 
-  # Firewall
-  networking.firewall = {
-    enable = true;
-    allowedTCPPorts = [22];
-  };
+  # # Firewall
+  # networking.firewall = {
+  #   enable = true;
+  #   allowedTCPPorts = [22];
+  # };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.nixos = {
     isNormalUser = true;
     extraGroups = ["wheel"]; # Enable ‘sudo’ for the user.
-    openssh.authorizedKeys.keys = [
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDvNswJJ78s86acU9aoGXxzeOjnPuxScADBBLH9VxKPT me@changsun.work"
-    ];
+    # openssh.authorizedKeys.keys = [
+    #   "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDvNswJJ78s86acU9aoGXxzeOjnPuxScADBBLH9VxKPT me@changsun.work"
+    # ];
     shell = pkgs.nushell;
     #   packages = with pkgs; [
     #     tree
