@@ -74,6 +74,16 @@
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
 
+  # Use xfce DE
+  services.xserver = {
+    enable = true;
+    desktopManager = {
+      xterm.enable = false;
+      xfce.enable = true;
+    };
+  };
+  services.displayManager.defaultSession = "xfce";
+
   # # SSH
   # services.openssh = {
   #   enable = true;
