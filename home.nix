@@ -7,16 +7,20 @@
   home.homeDirectory = "/home/nixos";
 
   home.packages = with pkgs; [
-    # bat
-    # btop
+    bat
+    btop
     fastfetch
     helix
-    # xh
+    xh
     # sbcl
     # rlwrap
     # gnupg1
     # openssl
   ];
+
+  programs.librewolf = {
+    enable = true;
+  };
 
   programs.nushell = {
     enable = true;
