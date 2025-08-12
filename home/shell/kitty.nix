@@ -7,5 +7,8 @@
       size = 22;
     };
     themeFile = "tokyo_night_night";
+    settings = {
+      hide_window_decorations = "no";
+    };
   };
 }

@@ -1,9 +1,9 @@
 {pkgs, ...}: {
   imports = [
-    ./shell/kitty/default.nix
-    ./shell/nushell/default.nix
-    ./shell/starship/default.nix
+    ./shell/kitty.nix
+    ./shell/nushell.nix
+    ./shell/starship.nix
 
-    ./wm/rofi/default.nix
+    ./gui/rofi.nix
   ];
 }

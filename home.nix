@@ -19,6 +19,7 @@
 
     # Fonts
     fira-code
+    noto-fonts
     noto-fonts-cjk-sans
 
     # sbcl

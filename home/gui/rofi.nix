@@ -6,5 +6,6 @@
       # "drun"
     ];
     theme = "material";
+    font = "Noto Sans CJK SC 20";
   };
 }
