@@ -3,6 +3,10 @@
   pkgs,
   ...
 }: {
+  imports = [
+    ./kitty-home.nix
+  ];
+
   home.username = "nixos";
   home.homeDirectory = "/home/nixos";
 
@@ -12,6 +16,8 @@
     fastfetch
     helix
     xh
+    fira-code
+    noto-fonts-cjk-sans
     # sbcl
     # rlwrap
     # gnupg1
@@ -30,7 +36,7 @@
 
     configFile.text = ''
       $env.config = {
-        buffer_editor: "vim"
+        buffer_editor: "hx"
         show_banner: false
       }
     '';

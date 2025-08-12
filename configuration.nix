@@ -10,6 +10,7 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ./xmonad.nix
   ];
 
   # Use the systemd-boot EFI boot loader.
@@ -75,14 +76,14 @@
   services.libinput.enable = true;
 
   # Use xfce DE
-  services.xserver = {
-    enable = true;
-    desktopManager = {
-      xterm.enable = false;
-      xfce.enable = true;
-    };
-  };
-  services.displayManager.defaultSession = "xfce";
+  # services.xserver = {
+  #   enable = true;
+  #   desktopManager = {
+  #     xterm.enable = false;
+  #     xfce.enable = true;
+  #   };
+  # };
+  # services.displayManager.defaultSession = "xfce";
 
   # # SSH
   # services.openssh = {
@@ -98,13 +99,16 @@
   #   enable = true;
   #   allowedTCPPorts = [22];
   # };
+  services.mullvad-vpn = {
+    enable = true;
+    package = pkgs.mullvad-vpn;
+  };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.nixos = {
     isNormalUser = true;
     extraGroups = ["wheel"]; # Enable ‘sudo’ for the user.
     # openssh.authorizedKeys.keys = [
-    #   "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDvNswJJ78s86acU9aoGXxzeOjnPuxScADBBLH9VxKPT me@changsun.work"
     # ];
     shell = pkgs.nushell;
     #   packages = with pkgs; [
