@@ -1,23 +1,22 @@
 {pkgs, ...}: {
-  services.xserver = {
-    enable = true;
-    windowManager.xmonad = {
+  services = {
+    xserver = {
       enable = true;
-      enableContribAndExtras = true;
-      config = builtins.readFile ./config.hs;
-    };
-    displayManager = {
-      defaultSession = "none+xmonad";
-      lightdm.greeters.enso = {
-        enable = true;
-      };
-    };
-  };
 
-  services.displayManager = {
-    defaultSession = "none+xmonad";
-    # lightdm.greeters.enso = {
-    #   enable = true;
-    # };
+      windowManager.xmonad = {
+        enable = true;
+        enableContribAndExtras = true;
+        config = builtins.readFile ./config.hs;
+      };
+
+      displayManager.lightdm.greeters.enso.enable = true;
+    };
+
+    displayManager.defaultSession = "none+xmonad";
+
+    libinput = {
+      enable = true;
+      touchpad.naturalScrolling = true;
+    };
   };
 }

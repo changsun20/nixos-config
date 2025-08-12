@@ -11,13 +11,16 @@
   home.homeDirectory = "/home/nixos";
 
   home.packages = with pkgs; [
+    # CLI programs and utilities
     bat
     btop
     fastfetch
-    helix
     xh
+
+    # Fonts
     fira-code
     noto-fonts-cjk-sans
+
     # sbcl
     # rlwrap
     # gnupg1
@@ -28,19 +31,19 @@
     enable = true;
   };
 
-  programs.nushell = {
-    enable = true;
-    envFile.text = ''
-      $env.PROMPT_COMMAND_RIGHT = ""
-    '';
+  # programs.nushell = {
+  #   enable = true;
+  #   envFile.text = ''
+  #     $env.PROMPT_COMMAND_RIGHT = ""
+  #   '';
 
-    configFile.text = ''
-      $env.config = {
-        buffer_editor: "hx"
-        show_banner: false
-      }
-    '';
-  };
+  #   configFile.text = ''
+  #     $env.config = {
+  #       buffer_editor: "hx"
+  #       show_banner: false
+  #     }
+  #   '';
+  # };
 
   programs.helix = {
     enable = true;
