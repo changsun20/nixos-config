@@ -4,7 +4,7 @@
     windowManager.xmonad = {
       enable = true;
       enableContribAndExtras = true;
-      config = builtins.readFile ./xmonad.hs;
+      config = builtins.readFile ./config.hs;
     };
     displayManager = {
       defaultSession = "none+xmonad";
@@ -12,5 +12,12 @@
         enable = true;
       };
     };
+  };
+
+  services.displayManager = {
+    defaultSession = "none+xmonad";
+    # lightdm.greeters.enso = {
+    #   enable = true;
+    # };
   };
 }

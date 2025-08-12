@@ -4,7 +4,7 @@
   ...
 }: {
   imports = [
-    ./kitty-home.nix
+    ./home/default.nix
   ];
 
   home.username = "nixos";
