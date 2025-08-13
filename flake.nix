@@ -11,8 +11,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    # hyprland.url = "github:hyprwm/Hyprland";
   };
 
   outputs = {
@@ -33,7 +31,7 @@
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       inherit system;
 
-      # specialArgs = {inherit pkgs inputs;};
+      # specialArgs = {inherit inputs;};
 
       modules = [
         ./configuration.nix
@@ -51,15 +49,6 @@
 
           # extraSpecialArgs = {inherit inputs;};
         }
-
-        # {
-        #   wayland.windowManager.hyprland = {
-        #     enable = true;
-        #     # set the flake package
-        #     package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-        #     portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
-        #   };
-        # }
       ];
     };
   };

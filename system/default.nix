@@ -1,6 +1,9 @@
 {pkgs, ...}: {
   imports = [
-    ./xmonad/default.nix
+    ./niri.nix
+    ./ly.nix
     ./i18n.nix
+    ./mullvad.nix
+    ./console.nix
   ];
 }

@@ -94,10 +94,10 @@
   #   enable = true;
   #   allowedTCPPorts = [22];
   # };
-  services.mullvad-vpn = {
-    enable = true;
-    package = pkgs.mullvad-vpn;
-  };
+  # services.mullvad-vpn = {
+  #   enable = true;
+  #   package = pkgs.mullvad-vpn;
+  # };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.nixos = {

@@ -4,11 +4,11 @@
     font = {
       name = "Fira Code";
       package = pkgs.fira-code;
-      size = 22;
+      size = 18;
     };
     themeFile = "tokyo_night_night";
     settings = {
-      hide_window_decorations = "no";
+      hide_window_decorations = "yes";
     };
   };
 }
