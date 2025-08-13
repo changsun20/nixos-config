@@ -4,7 +4,7 @@
   ...
 }: {
   imports = [
-    ./home/default.nix
+    ./home
   ];
 
   home.username = "nixos";

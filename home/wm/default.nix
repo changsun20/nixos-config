@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   imports = [
-    ./core
-    ./programs
+    ./fuzzel.nix
+    ./dunst.nix
   ];
 }
