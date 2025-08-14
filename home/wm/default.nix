@@ -2,7 +2,8 @@
   imports = [
     ./fuzzel.nix
     # ./dunst.nix
-    ./bg.nix
+    ./swaybg.nix
     ./mako.nix
+    ./waybar.nix
   ];
 }
