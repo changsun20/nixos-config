@@ -7,7 +7,7 @@
       background-color = "#1e1e2edd";
       width = 300;
       height = 100;
-      border-color = "#89dceb";
+      border-color = "#7fc8ff";
       border-size = 2;
       border-radius = 10;
       icons = true;
@@ -19,7 +19,7 @@
 
       # --- Section for high urgency ---
       "urgency=high" = {
-        border-color = "#bf616a";
+        border-color = "#9b0000";
         default-timeout = 0; # Never automatically dismisses
       };
     };

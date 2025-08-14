@@ -1,6 +1,13 @@
-{pkgs, ...}: {
+{pkgs, ...}: let
+  style-path = ./style.css;
+in {
+  imports = [
+    ./settings.nix
+  ];
+
   programs.waybar = {
     enable = true;
+    style = "${style-path}";
   };
 
   systemd.user.services.waybar = {

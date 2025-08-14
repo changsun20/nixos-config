@@ -4,6 +4,6 @@
     # ./dunst.nix
     ./swaybg.nix
     ./mako.nix
-    ./waybar.nix
+    ./waybar
   ];
 }

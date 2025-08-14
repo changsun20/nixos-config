@@ -17,7 +17,7 @@
         selection-text = "cdd6f4ff";
         selection-match = "89dcebff";
         counter = "7f849cff";
-        border = "89dcebff";
+        border = "7fc8ffff";
       };
       border = {
         width = 4;
