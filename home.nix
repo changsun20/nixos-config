@@ -13,6 +13,7 @@
   home.packages = with pkgs; [
     # CLI programs and utilities
     bat
+    htop
     btop
     fastfetch
     xh

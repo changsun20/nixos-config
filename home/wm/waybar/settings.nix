@@ -3,10 +3,11 @@
     mainBar = {
       layer = "top";
       position = "top";
-      height = 40;
-      spacing = 16;
-      margin-top = 5;
-      margin-right = 5;
+      height = 36;
+      spacing = 8;
+      margin-top = 3;
+      margin-right = 3;
+      margin-left = 3;
 
       modules-left = [
         "cpu"
@@ -54,15 +55,15 @@
       };
 
       memory = {
-        interval = 10;
+        interval = 5;
         format = "󰍛 {used:0.2f}GB";
-        on-click = "foot btop";
+        on-click = "foot htop";
       };
 
       cpu = {
         interval = 5;
-        format = "󰻠 {}%";
-        on-click = "foot btop";
+        format = "󰻠 {usage}%";
+        on-click = "foot htop";
       };
     };
   };

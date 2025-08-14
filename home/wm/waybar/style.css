@@ -1,49 +1,47 @@
+@define-color border #7fc8ff;
+@define-color background rgba(30, 30, 46, 0.85);
+@define-color text-primary #d9d9d9;
+
 * {
     font-family: JetBrainsMono Nerd Font, sans-serif;
-    font-size: 17px;
+    font-size: 16px;
+    color: @text-primary;
 }
 
-window#waybar {
-    background-color: transparent;
-    color: #ffffff;
-    transition-property: all;
-    transition-duration: .5s;
+/* Base Module Styles */
+.modules-left,
+.modules-center,
+.modules-right {
+    background-color: @background;
+    padding: 0 12px;
+    border-radius: 10px;
+    border: 2px solid @border;
+    margin: 0 4px;
 }
 
-window#waybar.hidden {
-    opacity: 0.2;
+/* Module Contents */
+#network,
+#cpu,
+#memory,
+#wireplumber,
+#backlight,
+#clock {
+    padding: 0 8px;
 }
 
-
-/* Left modules */
-
-.modules-left{
-  background-color: #000917;
-  padding-left:5px;
-  padding-right:5px;
-  border-radius: 10px;
-  border: 2px solid #ffc87f;
-}
-
-#workspaces{
-  padding-right:10px;
-}
-
-#cpu{
-  padding-left:10px;
-}
-
+/* Workspaces */
 #workspaces button {
-    padding: 10px 5px;
-    background-color: #000917;
-    border-radius:0;
-    color: #ffffff;
-    outline:none;
-    border:none;
+    padding: 4px 15px;
+    background-color: transparent;
+    color: @text-primary;
+    border: none;
+    outline: none;
+    transition: all 0.2s ease;
 }
 
 #workspaces button:hover {
-    color:#cba6f7;
+    background-color: rgba(127, 200, 255, 0.1);    
+    color: @border;
 }
 
 #workspaces button.focused {
@@ -54,26 +52,13 @@ window#waybar.hidden {
     color: #eb4d4b;
 }
 
-
-/* Center Modules */
-
-.modules-center{
-  background-color: #000917;
-  padding-left:10px;
-  padding-right:10px;
-  border-radius: 10px;
-  border: 2px solid #000326;
+/* Window Styles */
+window#waybar {
+    background-color: transparent;
+    /* color: #ffffff; */
+    transition: all 0.5s ease;
 }
 
-/* Right modules */
-.modules-right{
-  background-color: #000917;
-  padding-left:10px;
-  padding-right:10px;
-  border-radius: 10px;
-  border: 2px solid #000326;
-}
-
-#network{
-  padding:10px;
+window#waybar.hidden {
+    opacity: 0.2;
 }
