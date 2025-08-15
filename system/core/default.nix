@@ -4,5 +4,6 @@
     ./console.nix
     ./opengl.nix
     ./xdg-portal.nix
+    ./rtkit.nix
   ];
 }

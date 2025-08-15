@@ -3,5 +3,6 @@
     ./niri
     ./shell
     ./wm
+    ./programs
   ];
 }
