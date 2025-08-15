@@ -13,7 +13,9 @@ in {
   systemd.user.services.waybar = {
     Unit = {
       Description = "Waybar for WM";
+      PartOf = ["graphical-session.target"];
       After = ["graphical-session.target"];
+      Requisite = ["graphical-session.target"];
     };
 
     Service = {
@@ -24,7 +26,7 @@ in {
     };
 
     Install = {
-      WantedBy = ["graphical-session.target"];
+      WantedBy = ["niri.service"];
     };
   };
 }

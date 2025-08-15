@@ -5,14 +5,12 @@ in {
     swaybg
   ];
 
-  # home.file.".local/share/my-wallpapers/sci-fi.png" = {
-  #   source = ../../assets/sci-fi.png;
-  # };
-
   systemd.user.services.swaybg = {
     Unit = {
       Description = "Sway Wallpaper Background";
+      PartOf = ["graphical-session.target"];
       After = ["graphical-session.target"];
+      Requisite = ["graphical-session.target"];
     };
 
     Service = {
@@ -23,7 +21,7 @@ in {
     };
 
     Install = {
-      WantedBy = ["graphical-session.target"];
+      WantedBy = ["niri.service"];
     };
   };
 }
