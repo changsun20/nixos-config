@@ -25,6 +25,7 @@
     noto-fonts
     noto-fonts-cjk-sans
 
+    signal-desktop
     # sbcl
     # rlwrap
     # gnupg1

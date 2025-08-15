@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  services.dunst = {
+  programs.swaylock = {
     enable = true;
   };
 }

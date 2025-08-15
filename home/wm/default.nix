@@ -1,9 +1,10 @@
 {pkgs, ...}: {
   imports = [
     ./fuzzel.nix
-    # ./dunst.nix
     ./swaybg.nix
     ./mako.nix
     ./waybar
+    ./swayidle.nix
+    ./swaylock.nix
   ];
 }
