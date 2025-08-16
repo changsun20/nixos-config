@@ -3,8 +3,8 @@
     enable = true;
     extraPortals = with pkgs; [
       xdg-desktop-portal-gtk
-      xdg-desktop-portal-gnome
+      xdg-desktop-portal-wlr
     ];
-    config.common.default = ["gnome" "gtk"];
+    config.common.default = ["wlr"];
   };
 }
