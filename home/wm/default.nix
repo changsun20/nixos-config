@@ -7,5 +7,6 @@
     ./swayidle.nix
     ./swaylock.nix
     ./ibus.nix
+    ./themes.nix
   ];
 }
