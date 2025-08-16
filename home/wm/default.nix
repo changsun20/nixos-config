@@ -8,5 +8,8 @@
     ./swaylock.nix
     ./ibus.nix
     ./themes.nix
+    ./brightnessctl.nix
+    # ./gammastep.nix
+    ./wluma.nix
   ];
 }

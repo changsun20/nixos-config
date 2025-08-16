@@ -11,7 +11,7 @@
     };
     font = {
       name = "Noto Sans CJK SC";
-      size = 14;
+      size = 12;
     };
   };
 }
