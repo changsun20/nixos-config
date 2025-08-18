@@ -9,7 +9,7 @@
     ./ibus.nix
     ./themes.nix
     ./brightnessctl.nix
-    # ./gammastep.nix
+    ./gammastep.nix
     ./wluma.nix
   ];
 }
