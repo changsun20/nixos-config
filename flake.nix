@@ -4,11 +4,18 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    alejandra.url = "github:kamadorueda/alejandra/4.0.0";
-    alejandra.inputs.nixpkgs.follows = "nixpkgs";
+    alejandra = {
+      url = "github:kamadorueda/alejandra/4.0.0";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     home-manager = {
       url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nvf = {
+      url = "github:NotAShelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -18,6 +25,7 @@
     nixpkgs,
     home-manager,
     alejandra,
+    nvf,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -47,7 +55,7 @@
 
           home-manager.users.nixos = import ./home.nix;
 
-          # extraSpecialArgs = {inherit inputs;};
+          home-manager.extraSpecialArgs = {inherit inputs;};
         }
       ];
     };
