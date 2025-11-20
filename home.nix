@@ -49,9 +49,11 @@
 
   programs.git = {
     enable = true;
-    userName = "changsun20";
-    userEmail = "110759360+changsun20@users.noreply.github.com";
-    extraConfig = {
+    settings = {
+      user = {
+        name = "changsun20";
+        email = "110759360+changsun20@users.noreply.github.com";
+      };
       gpg.format = "ssh";
       commit.gpgsign = true;
       tag.gpgsign = true;
