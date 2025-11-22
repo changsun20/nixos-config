@@ -1,3 +1,3 @@
 alejandra . -q
 git add .
-sudo nixos-rebuild switch --flake .#vm
+sudo nixos-rebuild switch --flake .#thinkbook
