@@ -8,7 +8,9 @@
     enable = true;
     settings = {
       PermitRootLogin = "no";
-      # PasswordAuthentication = false;
+      PasswordAuthentication = false;
     };
   };
+
+  virtualisation.virtualbox.guest.enable = true;
 }
