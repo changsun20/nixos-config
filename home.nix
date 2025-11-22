@@ -17,7 +17,7 @@
     btop
     fastfetch
     xh
-    libnotify
+    # libnotify
 
     # Fonts
     fira-code

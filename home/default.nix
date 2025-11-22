@@ -1,8 +1,8 @@
 {pkgs, ...}: {
   imports = [
-    ./niri
+    # ./niri
     ./shell
-    ./wm
-    ./programs
+    # ./wm
+    # ./programs
   ];
 }
