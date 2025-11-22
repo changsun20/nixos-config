@@ -3,7 +3,7 @@
     enable = true;
     theme = "tokyonight-night";
     settings = {
-      main.font = "JetbrainsMono Nerd Font:size=20";
+      main.font = "JetbrainsMono Nerd Font:size=16";
       scrollback.lines = 10000;
     };
   };
