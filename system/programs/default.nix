@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   imports = [
-    ./ly.nix
+    # ./ly.nix
     ./mullvad.nix
     ./niri.nix
     ./foot.nix
