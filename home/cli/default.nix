@@ -10,5 +10,6 @@
     fastfetch
     xh
     ripgrep
+    dconf2nix
   ];
 }
