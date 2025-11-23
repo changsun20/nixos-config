@@ -11,14 +11,6 @@
   home.homeDirectory = "/home/nixos";
 
   home.packages = with pkgs; [
-    # CLI programs and utilities
-    bat
-    htop
-    btop
-    fastfetch
-    xh
-    # libnotify
-
     # Fonts
     fira-code
     nerd-fonts.jetbrains-mono
