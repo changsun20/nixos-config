@@ -5,5 +5,6 @@
     ./cli
     ./dconf
     ./gui
+    ./coding
   ];
 }

@@ -11,18 +11,7 @@
   home.homeDirectory = "/home/nixos";
 
   home.packages = with pkgs; [
-    # Fonts
-    fira-code
-    nerd-fonts.jetbrains-mono
-    noto-fonts
-    noto-fonts-cjk-sans
-    noto-fonts-cjk-serif
-
     signal-desktop
-    # sbcl
-    # rlwrap
-    # gnupg1
-    # openssl
   ];
 
   programs.librewolf = {
