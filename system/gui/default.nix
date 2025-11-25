@@ -1,7 +1,6 @@
 {pkgs, ...}: {
   imports = [
-    ./core
-    ./cli
-    ./gui
+    ./foot.nix
+    ./mullvad.nix
   ];
 }

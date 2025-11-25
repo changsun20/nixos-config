@@ -1,7 +1,5 @@
 {pkgs, ...}: {
   imports = [
-    ./core
-    ./cli
-    ./gui
+    ./smartmontools.nix
   ];
 }

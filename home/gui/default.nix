@@ -4,7 +4,6 @@
   ...
 }: {
   imports = [
-    ./mullvad.nix
     ./firefox.nix
   ];
 
