@@ -14,9 +14,9 @@
     signal-desktop
   ];
 
-  programs.librewolf = {
-    enable = true;
-  };
+  # programs.librewolf = {
+  #   enable = true;
+  # };
 
   programs.helix = {
     enable = true;
