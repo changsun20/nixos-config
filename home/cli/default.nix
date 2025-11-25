@@ -11,5 +11,6 @@
     xh
     ripgrep
     dconf2nix
+    just
   ];
 }
