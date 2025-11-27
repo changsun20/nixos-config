@@ -10,6 +10,8 @@
   home.username = "nixos";
   home.homeDirectory = "/home/nixos";
 
+  home.enableNixpkgsReleaseCheck = false;
+
   home.packages = with pkgs; [
     signal-desktop
   ];

@@ -13,5 +13,6 @@
     loupe
     amberol
     celluloid
+    bitwarden-desktop
   ];
 }

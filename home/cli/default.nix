@@ -12,5 +12,6 @@
     ripgrep
     dconf2nix
     just
+    tlrc
   ];
 }
