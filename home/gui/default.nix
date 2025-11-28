@@ -16,5 +16,8 @@
     amberol
     celluloid
     bitwarden-desktop
+    # kooha
   ];
+
+  # services.flameshot.enable = true;
 }
