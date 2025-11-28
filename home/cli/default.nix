@@ -13,5 +13,6 @@
     dconf2nix
     just
     tlrc
+    lshw
   ];
 }

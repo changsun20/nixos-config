@@ -6,6 +6,7 @@
   imports = [
     ./firefox.nix
     ./vscode.nix
+    ./thunderbird.nix
   ];
 
   home.packages = with pkgs; [
