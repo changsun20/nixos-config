@@ -4,7 +4,7 @@ with lib.hm.gvariant; {
   dconf.settings = {
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
-      font-name = "Noto Sans CJK SC 12";
+      font-name = "Noto Sans CJK SC 16";
       gtk-theme = "Flat-Remix-GTK-Grey-Darkest";
       icon-theme = "Adwaita";
     };

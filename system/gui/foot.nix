@@ -4,7 +4,7 @@
     theme = "tokyonight-night";
     settings = {
       main = {
-        font = "JetbrainsMono Nerd Font:size=16";
+        font = "JetbrainsMono Nerd Font:size=20";
         initial-window-mode = "maximized";
       };
       scrollback.lines = 10000;
