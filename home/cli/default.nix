@@ -3,6 +3,9 @@
   pkgs,
   ...
 }: {
+  imports = [
+    ./gh.nix
+  ];
   home.packages = with pkgs; [
     bat
     htop
