@@ -17,5 +17,13 @@
     just
     tlrc
     lshw
+
+    gzip
+    bzip2
+    xz
+    zip
+    unzip
+    p7zip
+    zstd
   ];
 }
