@@ -7,7 +7,7 @@
   imports = [
     ../../base/base.nix
     ./hardware-configuration.nix
-    # ../../base/gaming.nix
+    ../../base/gaming.nix
   ];
 
   # For offloading, `modesetting` is needed additionally,
