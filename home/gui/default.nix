@@ -16,7 +16,7 @@
     amberol
     celluloid
     bitwarden-desktop
-    # wechat-uos
+    wechat-uos
     # kooha
   ];
 
