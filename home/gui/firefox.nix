@@ -47,10 +47,10 @@ in {
         "browser.safebrowsing.malware.enabled" = false;
         "browser.safebrowsing.phishing.enabled" = false;
 
-        "font.minimum-size.x-western" = 18;
-        "font.minimum-size.zh-CN" = 18;
-        "font.size.variable.x-western" = 18;
-        "font.size.variable.zh-CN" = 18;
+        # "font.minimum-size.x-western" = 18;
+        # "font.minimum-size.zh-CN" = 18;
+        # "font.size.variable.x-western" = 18;
+        # "font.size.variable.zh-CN" = 18;
       };
       extraConfig = builtins.readFile firefox_config_file;
     };

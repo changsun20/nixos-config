@@ -12,11 +12,14 @@
     btop
     fastfetch
     xh
-    ripgrep
     dconf2nix
     just
     tlrc
     lshw
+
+    ripgrep
+    fzf
+    fd
 
     gzip
     bzip2

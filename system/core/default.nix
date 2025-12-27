@@ -3,7 +3,8 @@
     ./i18n.nix
     ./console.nix
     ./opengl.nix
-    ./gnome.nix
+    # ./gnome.nix
     ./allow-unfree.nix
+    ./cosmic.nix
   ];
 }

@@ -6,9 +6,11 @@
     ];
     inputMethod = {
       enable = true;
-      type = "ibus";
-      ibus.engines = with pkgs.ibus-engines; [
-        rime
+      type = "fcitx5";
+      fcitx5.addons = with pkgs; [
+        fcitx5-gtk
+        fcitx5-rime
+        rime-data
       ];
     };
   };

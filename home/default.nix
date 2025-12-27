@@ -3,7 +3,7 @@
     ./core
     ./shell
     ./cli
-    ./dconf
+    # ./dconf
     ./gui
     ./coding
   ];
