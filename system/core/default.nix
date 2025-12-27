@@ -6,5 +6,7 @@
     # ./gnome.nix
     ./allow-unfree.nix
     ./cosmic.nix
+    # ./kde.nix
+    # ./xfce.nix
   ];
 }
