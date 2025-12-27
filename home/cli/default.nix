@@ -7,20 +7,25 @@
     ./gh.nix
   ];
   home.packages = with pkgs; [
+    # System tools
     bat
     htop
     btop
     fastfetch
-    xh
     dconf2nix
-    just
     tlrc
     lshw
 
+    # Dev tools
+    xh
+    just
+
+    # Search tools
     ripgrep
     fzf
     fd
 
+    # Compression tools
     gzip
     bzip2
     xz
@@ -28,5 +33,9 @@
     unzip
     p7zip
     zstd
+
+    # Backup tools
+    rclone
+    rsync
   ];
 }

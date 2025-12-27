@@ -47,6 +47,8 @@ in {
         "browser.safebrowsing.malware.enabled" = false;
         "browser.safebrowsing.phishing.enabled" = false;
 
+        "widget.gtk.libadwaita-colors.enabled" = false;
+
         # "font.minimum-size.x-western" = 18;
         # "font.minimum-size.zh-CN" = 18;
         # "font.size.variable.x-western" = 18;

@@ -95,7 +95,7 @@
     extraGroups = ["wheel"]; # Enable ‘sudo’ for the user.
     # openssh.authorizedKeys.keys = [
     # ];
-    shell = pkgs.nushell;
+    # shell = pkgs.fish; # set in a separate file
     #   packages = with pkgs; [
     #     tree
     #   ];
@@ -115,7 +115,7 @@
     wget
   ];
 
-  environment.shells = with pkgs; [nushell];
+  # environment.shells = with pkgs; [nushell];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

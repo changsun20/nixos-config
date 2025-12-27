@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   imports = [
-    ./nushell.nix
+    # ./nushell.nix
     ./starship.nix
     ./nvf.nix
   ];
