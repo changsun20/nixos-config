@@ -16,5 +16,5 @@
       starship init fish | source
     '';
   };
-  users.users.nixos.shell = pkgs.fish;
+  users.users.nixos.shell = pkgs.bash;
 }
