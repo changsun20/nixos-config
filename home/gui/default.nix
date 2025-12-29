@@ -17,6 +17,7 @@
     celluloid
     bitwarden-desktop
     wechat-uos
+    mullvad-browser
     # kooha
   ];
 

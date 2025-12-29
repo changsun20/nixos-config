@@ -14,13 +14,13 @@
     btop
     fastfetch
     dconf2nix
-    tlrc
     lshw
 
     # Dev tools
     xh
     just
     tokei
+    github-copilot-cli
 
     # Search tools
     ripgrep
@@ -39,5 +39,10 @@
     # Backup tools
     rclone
     rsync
+
+    # Info tools
+    tlrc
+    kiwix-tools
+    lynx
   ];
 }

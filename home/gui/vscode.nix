@@ -13,6 +13,7 @@
       userSettings = {
         "files.autoSave" = "onFocusChange";
         "editor.fontSize" = 19;
+        "window.zoomLevel" = 1;
       };
     };
   };
