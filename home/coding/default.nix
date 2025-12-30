@@ -4,5 +4,6 @@
     ./go.nix
     ./gcc.nix
     ./zig.nix
+    ./latex.nix
   ];
 }
