@@ -18,6 +18,7 @@
     bitwarden-desktop
     wechat-uos
     mullvad-browser
+    zotero
     # kooha
   ];
 
