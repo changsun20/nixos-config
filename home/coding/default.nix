@@ -2,7 +2,7 @@
   imports = [
     ./rust.nix
     ./go.nix
-    ./gcc.nix
+    ./c.nix
     ./zig.nix
     ./latex.nix
   ];
