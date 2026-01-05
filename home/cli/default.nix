@@ -15,12 +15,14 @@
     fastfetch
     dconf2nix
     lshw
+    tree
 
     # Dev tools
     xh
     just
-    tokei
+    scc
     github-copilot-cli
+    hyperfine
 
     # Search tools
     ripgrep
