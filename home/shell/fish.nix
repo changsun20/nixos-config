@@ -15,6 +15,7 @@
     interactiveShellInit = ''
       set fish_greeting
       starship init fish | source
+      direnv hook fish | source
     '';
   };
 }

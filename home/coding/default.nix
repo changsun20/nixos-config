@@ -5,5 +5,7 @@
     ./c.nix
     ./zig.nix
     ./latex.nix
+    # ./uv.nix
+    ./direnv.nix
   ];
 }
