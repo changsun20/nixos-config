@@ -21,7 +21,8 @@
     xh
     just
     scc
-    github-copilot-cli
+    # github-copilot-cli
+    gemini-cli
     hyperfine
 
     # Search tools
