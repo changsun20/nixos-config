@@ -30,6 +30,24 @@
   } @ inputs: let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
+
+    mkSystem = hostConfig:
+      nixpkgs.lib.nixosSystem {
+        inherit system;
+        modules = [
+          hostConfig
+          {
+            environment.systemPackages = [alejandra.defaultPackage.${system}];
+          }
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.nixos = import ./home.nix;
+            home-manager.extraSpecialArgs = {inherit inputs;};
+          }
+        ];
+      };
   in {
     packages.${system} = {
       hello = pkgs.hello;
@@ -37,98 +55,10 @@
     };
 
     nixosConfigurations = {
-      vm = nixpkgs.lib.nixosSystem {
-        inherit system;
-
-        # specialArgs = {inherit inputs;};
-
-        modules = [
-          ./hosts/vm/configuration.nix
-
-          {
-            environment.systemPackages = [alejandra.defaultPackage.${system}];
-          }
-
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-
-            home-manager.users.nixos = import ./home.nix;
-
-            home-manager.extraSpecialArgs = {inherit inputs;};
-          }
-        ];
-      };
-      thinkbook = nixpkgs.lib.nixosSystem {
-        inherit system;
-
-        # specialArgs = {inherit inputs;};
-
-        modules = [
-          ./hosts/thinkbook/configuration.nix
-
-          {
-            environment.systemPackages = [alejandra.defaultPackage.${system}];
-          }
-
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-
-            home-manager.users.nixos = import ./home.nix;
-
-            home-manager.extraSpecialArgs = {inherit inputs;};
-          }
-        ];
-      };
-      hpzhan = nixpkgs.lib.nixosSystem {
-        inherit system;
-
-        # specialArgs = {inherit inputs;};
-
-        modules = [
-          ./hosts/hpzhan/configuration.nix
-
-          {
-            environment.systemPackages = [alejandra.defaultPackage.${system}];
-          }
-
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-
-            home-manager.users.nixos = import ./home.nix;
-
-            home-manager.extraSpecialArgs = {inherit inputs;};
-          }
-        ];
-      };
-      tx = nixpkgs.lib.nixosSystem {
-        inherit system;
-
-        # specialArgs = {inherit inputs;};
-
-        modules = [
-          ./hosts/tx/configuration.nix
-
-          {
-            environment.systemPackages = [alejandra.defaultPackage.${system}];
-          }
-
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-
-            home-manager.users.nixos = import ./home.nix;
-
-            home-manager.extraSpecialArgs = {inherit inputs;};
-          }
-        ];
-      };
+      vm = mkSystem ./hosts/vm/configuration.nix;
+      thinkbook = mkSystem ./hosts/thinkbook/configuration.nix;
+      hpzhan = mkSystem ./hosts/hpzhan/configuration.nix;
+      tx = mkSystem ./hosts/tx/configuration.nix;
     };
   };
 }
