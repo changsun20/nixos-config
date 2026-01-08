@@ -7,5 +7,6 @@
     ./latex.nix
     # ./uv.nix
     ./direnv.nix
+    ./python.nix
   ];
 }

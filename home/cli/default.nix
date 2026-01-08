@@ -6,6 +6,8 @@
   imports = [
     ./zellij.nix
     ./gh.nix
+    ./lazygit.nix
+    ./opencode.nix
   ];
   home.packages = with pkgs; [
     # System tools
