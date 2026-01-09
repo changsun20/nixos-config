@@ -1,8 +1,4 @@
-{
-  inputs,
-  outputs,
-  ...
-}: {
+{...}: {
   # SSH
   services.openssh = {
     enable = true;

@@ -5,9 +5,9 @@
   ...
 }: {
   imports = [
-    ../../base/base.nix
+    ../../system
     ./hardware-configuration.nix
-    ../../base/gaming.nix
+    ../../system/optional/gaming.nix
   ];
 
   # For offloading, `modesetting` is needed additionally,

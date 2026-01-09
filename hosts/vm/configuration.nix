@@ -5,8 +5,8 @@
   ...
 }: {
   imports = [
-    ../../base/base.nix
-    ../../base/vm.nix
+    ../../system
     ./hardware-configuration.nix
+    ../../system/optional/vm.nix
   ];
 }

@@ -22,6 +22,4 @@
     zotero
     # kooha
   ];
-
-  # services.flameshot.enable = true;
 }

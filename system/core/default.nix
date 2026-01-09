@@ -3,10 +3,14 @@
     ./i18n.nix
     ./console.nix
     ./opengl.nix
-    # ./gnome.nix
     ./allow-unfree.nix
     ./cosmic.nix
-    # ./kde.nix
-    # ./xfce.nix
+    ./bootloader.nix
+    ./nix.nix
+    ./kernel.nix
+    ./networking.nix
+    ./timezone.nix
+    ./users.nix
+    ./state-version.nix
   ];
 }
