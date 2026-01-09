@@ -1,5 +1,7 @@
 {pkgs, ...}: {
   imports = [
+    ./git.nix
+    ./helix.nix
     ./rust.nix
     ./go.nix
     ./c.nix

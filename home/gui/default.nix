@@ -4,6 +4,7 @@
   ...
 }: {
   imports = [
+    ./packages.nix
     ./firefox.nix
     ./vscode.nix
     ./thunderbird.nix
