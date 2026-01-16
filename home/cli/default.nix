@@ -23,9 +23,9 @@
     xh
     just
     scc
-    # github-copilot-cli
     gemini-cli
     hyperfine
+    ffmpeg
 
     # Search tools
     ripgrep
@@ -48,6 +48,5 @@
     # Info tools
     tlrc
     kiwix-tools
-    lynx
   ];
 }
