@@ -9,6 +9,7 @@
     ./vscode.nix
     ./thunderbird.nix
     ./zathura.nix
+    ./fuzzel.nix
   ];
 
   home.packages = with pkgs; [
