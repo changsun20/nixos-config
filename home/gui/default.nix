@@ -8,6 +8,7 @@
     ./firefox.nix
     ./vscode.nix
     ./thunderbird.nix
+    ./zathura.nix
   ];
 
   home.packages = with pkgs; [
@@ -20,6 +21,5 @@
     wechat-uos
     mullvad-browser
     zotero
-    # kooha
   ];
 }
