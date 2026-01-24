@@ -9,6 +9,10 @@
         algorithm2e
         ifoddpage
         relsize
+        secdot
+        pinlabel
+        tikz-cd
+        # nicefrac
       ]
   );
 in {
