@@ -7,7 +7,6 @@
     ./core
     ./shell
     ./cli
-    # ./dconf
     ./gui
     ./coding
   ];
