@@ -2,6 +2,6 @@
   imports = [
     ./fish.nix
     ./starship.nix
-    ./nvf.nix
+    # ./nvf.nix
   ];
 }

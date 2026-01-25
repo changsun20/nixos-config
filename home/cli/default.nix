@@ -8,6 +8,8 @@
     ./gh.nix
     ./lazygit.nix
     ./opencode.nix
+    ./git.nix
+    ./helix.nix
   ];
   home.packages = with pkgs; [
     # System tools
@@ -20,6 +22,7 @@
     tree
 
     # Dev tools
+    tree-sitter
     xh
     just
     scc

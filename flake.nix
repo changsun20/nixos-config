@@ -14,8 +14,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nvf = {
-      url = "github:NotAShelf/nvf";
+    # nvf = {
+    #   url = "github:NotAShelf/nvf";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
+    nixcat-nvim = {
+      url = "path:./nixcat-nvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -25,7 +29,8 @@
     nixpkgs,
     home-manager,
     alejandra,
-    nvf,
+    nixcat-nvim,
+    # nvf,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -34,6 +39,7 @@
     mkSystem = hostConfig:
       nixpkgs.lib.nixosSystem {
         inherit system;
+        specialArgs = {inherit inputs;};
         modules = [
           hostConfig
           {

@@ -5,6 +5,7 @@
 }: {
   programs.helix = {
     enable = true;
+    # package = pkgs.evil-helix;
     settings = {
       theme = "tokyonight";
       editor = {line-number = "relative";};
