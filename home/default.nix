@@ -10,7 +10,5 @@
     # ./dconf
     ./gui
     ./coding
-    inputs.nixcat-nvim.homeModules.default
   ];
-  nvim.enable = true;
 }

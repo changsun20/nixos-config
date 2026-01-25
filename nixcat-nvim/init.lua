@@ -646,7 +646,7 @@ require('nixCatsUtils.lazyCat').setup(nixCats.pawsible { 'allPlugins', 'start', 
       -- NOTE: nixCats: there is help in nixCats for lsps at `:h nixCats.LSPs` and also `:h nixCats.luaUtils`
       local servers = {}
       -- servers.clangd = {},
-      -- servers.gopls = {},
+      servers.gopls = {}
       -- servers.pyright = {},
       -- servers.rust_analyzer = {},
       -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
@@ -684,6 +684,8 @@ require('nixCatsUtils.lazyCat').setup(nixCats.pawsible { 'allPlugins', 'start', 
           },
         },
       }
+
+      servers.texlab = {}
 
       -- NOTE: nixCats: if nix, use lspconfig instead of mason
       -- You could MAKE it work, using lspsAndRuntimeDeps and sharedLibraries in nixCats
@@ -821,9 +823,9 @@ require('nixCatsUtils.lazyCat').setup(nixCats.pawsible { 'allPlugins', 'start', 
         -- No, but seriously. Please read `:help ins-completion`, it is really good!
         mapping = cmp.mapping.preset.insert {
           -- Select the [n]ext item
-          ['<C-n>'] = cmp.mapping.select_next_item(),
+          -- ['<C-n>'] = cmp.mapping.select_next_item(),
           -- Select the [p]revious item
-          ['<C-p>'] = cmp.mapping.select_prev_item(),
+          -- ['<C-p>'] = cmp.mapping.select_prev_item(),
 
           -- Scroll the documentation window [b]ack / [f]orward
           ['<C-b>'] = cmp.mapping.scroll_docs(-4),
@@ -836,13 +838,14 @@ require('nixCatsUtils.lazyCat').setup(nixCats.pawsible { 'allPlugins', 'start', 
 
           -- If you prefer more traditional completion keymaps,
           -- you can uncomment the following lines
-          --['<CR>'] = cmp.mapping.confirm { select = true },
-          --['<Tab>'] = cmp.mapping.select_next_item(),
-          --['<S-Tab>'] = cmp.mapping.select_prev_item(),
+          ['<CR>'] = cmp.mapping.confirm { select = true },
+          ['<Tab>'] = cmp.mapping.select_next_item(),
+          ['<S-Tab>'] = cmp.mapping.select_prev_item(),
 
           -- Manually trigger a completion from nvim-cmp.
           --  Generally you don't need this, because nvim-cmp will display
           --  completions whenever it has completion options available.
+          ['<C-e>'] = cmp.mapping.complete {},
           ['<C-Space>'] = cmp.mapping.complete {},
 
           -- Think of <c-l> as moving to the right of your snippet expansion.
@@ -955,8 +958,8 @@ require('nixCatsUtils.lazyCat').setup(nixCats.pawsible { 'allPlugins', 'start', 
         vim.treesitter.start(buf, language)
 
         -- enables treesitter based folds
-        vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
-        vim.wo.foldmethod = "expr"
+        vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+        vim.wo.foldmethod = 'expr'
         -- ensure folds are open to begin with
         vim.o.foldlevel = 99
 
@@ -966,8 +969,8 @@ require('nixCatsUtils.lazyCat').setup(nixCats.pawsible { 'allPlugins', 'start', 
         return true
       end
 
-      local installable_parsers = require("nvim-treesitter").get_available()
-      vim.api.nvim_create_autocmd("FileType", {
+      local installable_parsers = require('nvim-treesitter').get_available()
+      vim.api.nvim_create_autocmd('FileType', {
         callback = function(args)
           local buf, filetype = args.buf, args.match
           local language = vim.treesitter.language.get_lang(filetype)
@@ -975,10 +978,10 @@ require('nixCatsUtils.lazyCat').setup(nixCats.pawsible { 'allPlugins', 'start', 
             return
           end
 
-          if not treesitter_try_attach(buf,language) then
+          if not treesitter_try_attach(buf, language) then
             if vim.tbl_contains(installable_parsers, language) then
               -- not already installed, so try to install them via nvim-treesitter if possible
-              require("nvim-treesitter").install(language):await(function()
+              require('nvim-treesitter').install(language):await(function()
                 treesitter_try_attach(buf, language)
               end)
             end

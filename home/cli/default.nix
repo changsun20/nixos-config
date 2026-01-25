@@ -10,6 +10,7 @@
     ./opencode.nix
     ./git.nix
     ./helix.nix
+    ./nvim.nix
   ];
   home.packages = with pkgs; [
     # System tools
