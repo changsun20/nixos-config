@@ -11,6 +11,7 @@
     ./git.nix
     ./helix.nix
     ./nvim.nix
+    ./doomemacs.nix
   ];
   home.packages = with pkgs; [
     # System tools

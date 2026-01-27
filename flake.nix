@@ -14,13 +14,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # nvf = {
-    #   url = "github:NotAShelf/nvf";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
     nixcat-nvim = {
       url = "path:./nixcat-nvim";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nix-doom-emacs-unstraightened = {
+      url = "github:marienz/nix-doom-emacs-unstraightened";
+      # Optional, to download less. Neither the module nor the overlay uses this input.
+      inputs.nixpkgs.follows = "";
     };
   };
 
@@ -30,7 +32,6 @@
     home-manager,
     alejandra,
     nixcat-nvim,
-    # nvf,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -51,6 +52,9 @@
             home-manager.useUserPackages = true;
             home-manager.users.nixos = import ./home;
             home-manager.extraSpecialArgs = {inherit inputs;};
+            home-manager.sharedModules = [
+              inputs.nix-doom-emacs-unstraightened.homeModule
+            ];
           }
         ];
       };
