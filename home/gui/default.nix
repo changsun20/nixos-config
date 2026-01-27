@@ -10,6 +10,7 @@
     ./thunderbird.nix
     ./zathura.nix
     ./fuzzel.nix
+    ./doomemacs.nix
   ];
 
   home.packages = with pkgs; [
