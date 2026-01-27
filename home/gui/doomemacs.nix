@@ -15,10 +15,21 @@
 
   home.packages = with pkgs; [
     coreutils
+
+    # Font
     nerd-fonts.symbols-only
-    shellcheck # :lang sh
-    nixd # :lang nix
+
+    # :lang sh
+    shellcheck
+    # :lang nix
+    nixd
     nixfmt
+
+    # :term vterm
+    gnumake
+    cmake
+    libvterm
+    libtool
   ];
 
   home.sessionPath = [
