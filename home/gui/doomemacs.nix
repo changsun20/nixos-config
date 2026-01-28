@@ -24,12 +24,17 @@
     # :lang nix
     nixd
     nixfmt
+    # :lang latex
+    ghostscript
 
     # :term vterm
     gnumake
     cmake
     libvterm
     libtool
+
+    # :checkers spell
+    ispell
   ];
 
   home.sessionPath = [
