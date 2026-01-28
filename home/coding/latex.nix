@@ -12,7 +12,7 @@
         secdot
         pinlabel
         tikz-cd
-        # nicefrac
+        latexindent
       ]
   );
 in {
