@@ -21,6 +21,9 @@
     bitwarden-desktop
     wechat-uos
     mullvad-browser
+
+    # Academic
     zotero
+    # qgis
   ];
 }

@@ -14,15 +14,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixcat-nvim = {
-      url = "path:./nixcat-nvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    # nix-doom-emacs-unstraightened = {
-    #   url = "github:marienz/nix-doom-emacs-unstraightened";
-    #   # Optional, to download less. Neither the module nor the overlay uses this input.
-    #   inputs.nixpkgs.follows = "";
+    # nixcat-nvim = {
+    #   url = "path:./nixcat-nvim";
+    #   inputs.nixpkgs.follows = "nixpkgs";
     # };
   };
 
@@ -31,7 +25,7 @@
     nixpkgs,
     home-manager,
     alejandra,
-    nixcat-nvim,
+    # nixcat-nvim,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -52,9 +46,7 @@
             home-manager.useUserPackages = true;
             home-manager.users.nixos = import ./home;
             home-manager.extraSpecialArgs = {inherit inputs;};
-            # home-manager.sharedModules = [
-            #   inputs.nix-doom-emacs-unstraightened.homeModule
-            # ];
+            home-manager.backupFileExtension = "backup";
           }
         ];
       };
