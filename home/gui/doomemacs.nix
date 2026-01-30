@@ -26,6 +26,8 @@
     nixfmt
     # :lang latex
     ghostscript
+    # :lang python
+    pyright
 
     # :term vterm
     gnumake

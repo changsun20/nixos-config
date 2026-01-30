@@ -13,11 +13,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    # nixcat-nvim = {
-    #   url = "path:./nixcat-nvim";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
   };
 
   outputs = {
@@ -25,7 +20,6 @@
     nixpkgs,
     home-manager,
     alejandra,
-    # nixcat-nvim,
     ...
   } @ inputs: let
     system = "x86_64-linux";

@@ -10,7 +10,6 @@
     ./opencode.nix
     ./git.nix
     ./helix.nix
-    # ./nvim.nix
     ./ollama.nix
   ];
   home.packages = with pkgs; [

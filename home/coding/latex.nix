@@ -13,6 +13,10 @@
         pinlabel
         tikz-cd
         latexindent
+        dvipng
+        wrapfig
+        capt-of
+        xecjk
       ]
   );
 in {
