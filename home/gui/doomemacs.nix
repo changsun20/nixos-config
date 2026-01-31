@@ -3,14 +3,8 @@
   pkgs,
   ...
 }: {
-  # programs.doom-emacs = {
-  #   enable = true;
-  #   doomDir = ../../doom.d;
-  # };
-
   programs.emacs = {
     enable = true;
-    # package = pkgs.emacs-gtk;
   };
 
   home.packages = with pkgs; [

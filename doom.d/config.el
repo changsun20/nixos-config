@@ -76,5 +76,4 @@
 ;; they are implemented.
 
 ;; :lang latex
-(after! latex
-  (setq +latex-viewers '(pdf-tools)))
+(setq +latex-viewers '(pdf-tools))

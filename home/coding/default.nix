@@ -7,5 +7,7 @@
     ./latex.nix
     ./direnv.nix
     ./python.nix
+    ./java.nix
+    ./common-lisp.nix
   ];
 }
