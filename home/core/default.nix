@@ -3,6 +3,6 @@
     ./base.nix
     ./ibus.nix
     ./fonts.nix
-    ./keyring.nix
+    # ./keyring.nix
   ];
 }

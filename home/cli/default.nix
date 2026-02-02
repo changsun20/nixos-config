@@ -30,6 +30,10 @@
     gemini-cli
     hyperfine
     ffmpeg
+    gnupg
+
+    # Learning
+    exercism
 
     # Search tools
     ripgrep

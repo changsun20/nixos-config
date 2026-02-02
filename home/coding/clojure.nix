@@ -5,6 +5,10 @@
   ...
 }: {
   home.packages = with pkgs; [
-    sbcl
+    clojure
+    leiningen
+    clj-kondo
+    clojure-lsp
+    cljfmt
   ];
 }

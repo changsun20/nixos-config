@@ -8,6 +8,7 @@
     ./direnv.nix
     ./python.nix
     ./java.nix
-    ./common-lisp.nix
+    # ./common-lisp.nix
+    ./clojure.nix
   ];
 }
