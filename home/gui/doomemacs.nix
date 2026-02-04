@@ -15,13 +15,18 @@
 
     # :lang sh
     shellcheck
+    shfmt
     # :lang nix
     nixd
     nixfmt
     # :lang latex
     ghostscript
+    # :lang markdown
+    pandoc
     # :lang python
     pyright
+    # :lang java
+    jdt-language-server
 
     # :term vterm
     gnumake

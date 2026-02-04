@@ -10,5 +10,6 @@
     clj-kondo
     clojure-lsp
     cljfmt
+    babashka
   ];
 }
