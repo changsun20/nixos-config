@@ -16,6 +16,8 @@
     kdePackages.kpat # KPatience offers a selection of solitaire card games
     kdePackages.ksudoku # KSudoku is a logic-based symbol placement puzzle
     kdePackages.ktorrent # Powerful BitTorrent client
+    kdePackages.konsole # Terminal emulator console tool
+    kdePackages.discover # KDE app stor
     mpv
   ];
 
