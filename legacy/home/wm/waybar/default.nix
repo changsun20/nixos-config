@@ -1,6 +1,8 @@
-{pkgs, ...}: let
+{ pkgs, ... }:
+let
   style-path = ./style.css;
-in {
+in
+{
   imports = [
     ./settings.nix
   ];
@@ -13,9 +15,9 @@ in {
   systemd.user.services.waybar = {
     Unit = {
       Description = "Waybar for WM";
-      PartOf = ["graphical-session.target"];
-      After = ["graphical-session.target"];
-      Requisite = ["graphical-session.target"];
+      PartOf = [ "graphical-session.target" ];
+      After = [ "graphical-session.target" ];
+      Requisite = [ "graphical-session.target" ];
     };
 
     Service = {
@@ -26,7 +28,7 @@ in {
     };
 
     Install = {
-      WantedBy = ["niri.service"];
+      WantedBy = [ "niri.service" ];
     };
   };
 }

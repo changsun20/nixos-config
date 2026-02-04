@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   # Nix garbage collection
   nix.gc = {
     automatic = true;

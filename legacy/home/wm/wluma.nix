@@ -1,8 +1,9 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   services.wluma = {
     enable = true;
     settings = {
-      als.none = {};
+      als.none = { };
 
       output.backlight = [
         {
@@ -16,12 +17,12 @@
 
   systemd.user.services.wluma = {
     Unit = {
-      After = ["niri.service"];
-      PartOf = ["niri.service"];
-      Requisite = ["niri.service"];
+      After = [ "niri.service" ];
+      PartOf = [ "niri.service" ];
+      Requisite = [ "niri.service" ];
     };
     Install = {
-      WantedBy = ["niri.service"];
+      WantedBy = [ "niri.service" ];
     };
   };
 }

@@ -1,6 +1,8 @@
-{pkgs, ...}: let
+{ pkgs, ... }:
+let
   wallpaper = ../../assets/sci-fi.png;
-in {
+in
+{
   home.packages = with pkgs; [
     swaybg
   ];
@@ -8,9 +10,9 @@ in {
   systemd.user.services.swaybg = {
     Unit = {
       Description = "Sway Wallpaper Background";
-      PartOf = ["graphical-session.target"];
-      After = ["graphical-session.target"];
-      Requisite = ["graphical-session.target"];
+      PartOf = [ "graphical-session.target" ];
+      After = [ "graphical-session.target" ];
+      Requisite = [ "graphical-session.target" ];
     };
 
     Service = {
@@ -21,7 +23,7 @@ in {
     };
 
     Install = {
-      WantedBy = ["niri.service"];
+      WantedBy = [ "niri.service" ];
     };
   };
 }

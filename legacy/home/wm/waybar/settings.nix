@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   programs.waybar.settings = {
     mainBar = {
       layer = "top";
@@ -38,20 +39,34 @@
       network = {
         format = "{icon}";
         tooltip-format = "{ifname}";
-        format-icons = ["󰤯" "󰤟" "󰤢" "󰤥" "󰤨"];
+        format-icons = [
+          "󰤯"
+          "󰤟"
+          "󰤢"
+          "󰤥"
+          "󰤨"
+        ];
         format-disconnected = "󰖪";
         on-click = "foot nmtui";
       };
 
       backlight = {
         format = "{icon} {percent}%";
-        format-icons = ["󰃜" "󰃛" "󰃚"];
+        format-icons = [
+          "󰃜"
+          "󰃛"
+          "󰃚"
+        ];
       };
 
       wireplumber = {
         format = "{icon} {volume}%";
         format-muted = "󰖁";
-        format-icons = ["󰕿" "󰖀" "󰕾"];
+        format-icons = [
+          "󰕿"
+          "󰖀"
+          "󰕾"
+        ];
       };
 
       memory = {

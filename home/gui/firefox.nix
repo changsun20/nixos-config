@@ -2,9 +2,11 @@
   config,
   pkgs,
   ...
-}: let
+}:
+let
   firefox_config_file = ./user.js;
-in {
+in
+{
   programs.firefox = {
     enable = true;
     profiles.default = {

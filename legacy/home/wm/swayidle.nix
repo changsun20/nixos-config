@@ -1,7 +1,9 @@
-{pkgs, ...}: let
+{ pkgs, ... }:
+let
   lock = "${pkgs.swaylock}/bin/swaylock --daemonize";
   display = status: "${pkgs.niri}/bin/niri msg action power-${status}-monitors";
-in {
+in
+{
   services.swayidle = {
     enable = true;
     timeouts = [
@@ -47,9 +49,9 @@ in {
 
   systemd.user.services.swayidle = {
     Unit = {
-      After = ["niri.service"];
-      Requisite = ["niri.service"];
+      After = [ "niri.service" ];
+      Requisite = [ "niri.service" ];
     };
-    Install.WantedBy = ["niri.service"];
+    Install.WantedBy = [ "niri.service" ];
   };
 }

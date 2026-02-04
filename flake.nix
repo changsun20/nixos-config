@@ -15,46 +15,50 @@
     };
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    home-manager,
-    alejandra,
-    ...
-  } @ inputs: let
-    system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages.${system};
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      alejandra,
+      ...
+    }@inputs:
+    let
+      system = "x86_64-linux";
+      pkgs = nixpkgs.legacyPackages.${system};
 
-    mkSystem = hostConfig:
-      nixpkgs.lib.nixosSystem {
-        inherit system;
-        specialArgs = {inherit inputs;};
-        modules = [
-          hostConfig
-          {
-            environment.systemPackages = [alejandra.defaultPackage.${system}];
-          }
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.nixos = import ./home;
-            home-manager.extraSpecialArgs = {inherit inputs;};
-            home-manager.backupFileExtension = "backup";
-          }
-        ];
+      mkSystem =
+        hostConfig:
+        nixpkgs.lib.nixosSystem {
+          inherit system;
+          specialArgs = { inherit inputs; };
+          modules = [
+            hostConfig
+            {
+              environment.systemPackages = [ alejandra.defaultPackage.${system} ];
+            }
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.nixos = import ./home;
+              home-manager.extraSpecialArgs = { inherit inputs; };
+              home-manager.backupFileExtension = "backup";
+            }
+          ];
+        };
+    in
+    {
+      packages.${system} = {
+        hello = pkgs.hello;
+        default = self.packages.${system}.hello;
       };
-  in {
-    packages.${system} = {
-      hello = pkgs.hello;
-      default = self.packages.${system}.hello;
-    };
 
-    nixosConfigurations = {
-      vm = mkSystem ./hosts/vm/configuration.nix;
-      thinkbook = mkSystem ./hosts/thinkbook/configuration.nix;
-      hpzhan = mkSystem ./hosts/hpzhan/configuration.nix;
-      tx = mkSystem ./hosts/tx/configuration.nix;
+      nixosConfigurations = {
+        vm = mkSystem ./hosts/vm/configuration.nix;
+        thinkbook = mkSystem ./hosts/thinkbook/configuration.nix;
+        hpzhan = mkSystem ./hosts/hpzhan/configuration.nix;
+        tx = mkSystem ./hosts/tx/configuration.nix;
+      };
     };
-  };
 }

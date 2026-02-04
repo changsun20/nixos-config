@@ -2,7 +2,8 @@
   inputs,
   pkgs,
   ...
-}: {
+}:
+{
   programs.emacs = {
     enable = true;
   };
@@ -19,6 +20,7 @@
     # :lang nix
     nixd
     nixfmt
+    nixfmt-tree
     # :lang latex
     ghostscript
     # :lang markdown
