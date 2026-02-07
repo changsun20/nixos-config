@@ -8,6 +8,6 @@ if [ -z "$1" ]; then
     exit 1
 fi
 
-treefmt .
+treefmt
 git add .
 sudo nixos-rebuild switch --flake .#"$1"

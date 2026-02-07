@@ -11,7 +11,7 @@
     ./opencode.nix
     ./git.nix
     ./helix.nix
-    ./ollama.nix
+    # ./ollama.nix
   ];
   home.packages = with pkgs; [
     # System tools

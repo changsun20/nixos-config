@@ -77,3 +77,5 @@
 
 ;; :lang latex
 (setq +latex-viewers '(pdf-tools))
+
+(add-hook 'java-mode-hook 'eglot-java-mode)
