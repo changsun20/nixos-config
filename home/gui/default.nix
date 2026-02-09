@@ -13,18 +13,4 @@
     ./fuzzel.nix
     ./doomemacs.nix
   ];
-
-  home.packages = with pkgs; [
-    obsidian
-    loupe
-    amberol
-    celluloid
-    bitwarden-desktop
-    wechat-uos
-    mullvad-browser
-
-    # Academic
-    zotero
-    # qgis
-  ];
 }
