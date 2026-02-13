@@ -12,6 +12,7 @@
         waylandFrontend = true;
         addons = with pkgs; [
           kdePackages.fcitx5-qt
+          kdePackages.fcitx5-configtool
           fcitx5-rime
         ];
       };

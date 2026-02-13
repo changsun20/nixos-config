@@ -19,7 +19,7 @@
     mullvad-browser
 
     # Social
-    wechat-uos
+    wechat
     signal-desktop
     zoom-us
   ];
