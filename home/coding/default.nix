@@ -11,5 +11,6 @@
     ./java.nix
     # ./common-lisp.nix
     ./clojure.nix
+    ./node.nix
   ];
 }
