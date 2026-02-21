@@ -12,5 +12,6 @@
     clojure-lsp
     cljfmt
     babashka
+    neil
   ];
 }

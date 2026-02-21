@@ -7,8 +7,11 @@
 {
   imports = [
     ../../system
+    ../../system/optional/gaming.nix
     ./hardware-configuration.nix
   ];
+
+  services.xserver.videoDrivers = [ "modesetting" ];
 
   # # For offloading, `modesetting` is needed additionally,
   # # otherwise the X-server will be running permanently on nvidia,

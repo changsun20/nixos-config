@@ -17,6 +17,8 @@
     libreoffice
     bitwarden-desktop
     mullvad-browser
+    #rssguard
+    kdePackages.akregator
 
     # Social
     wechat-uos
