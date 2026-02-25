@@ -29,6 +29,8 @@
     pyright
     # :lang java
     jdt-language-server
+    # :lang solidity
+    solc
 
     # :term vterm
     gnumake
