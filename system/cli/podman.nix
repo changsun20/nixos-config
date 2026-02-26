@@ -9,9 +9,16 @@
     };
   };
 
-  users.users.nixos = {
-    extraGroups = [
-      "podman"
-    ];
+  environment.systemPackages = with pkgs; [
+    podman-compose
+  ];
+
+  environment.variables = {
+    PODMAN_COMPOSE_WARNING_LOGS = "false";
   };
+  # users.users.nixos = {
+  #   extraGroups = [
+  #     "podman"
+  #   ];
+  # };
 }

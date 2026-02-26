@@ -14,6 +14,9 @@
     # Font
     nerd-fonts.symbols-only
 
+    #:tools docker
+    dockerfile-language-server
+
     # :lang sh
     shellcheck
     shfmt
