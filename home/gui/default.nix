@@ -12,5 +12,6 @@
     ./zathura.nix
     ./fuzzel.nix
     ./doomemacs.nix
+    ./onlyoffice.nix
   ];
 }
