@@ -9,8 +9,8 @@
     ./direnv.nix
     ./python.nix
     ./java.nix
-    # ./common-lisp.nix
     ./clojure.nix
     ./node.nix
+    ./web3.nix
   ];
 }
