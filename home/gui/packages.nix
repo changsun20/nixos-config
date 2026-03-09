@@ -14,15 +14,16 @@
     qalculate-qt
     obsidian
     zotero
-    libreoffice
+    #libreoffice
     bitwarden-desktop
     mullvad-browser
     rssguard
-    #kdePackages.akregator
 
     # Social
     wechat-uos
     signal-desktop
     zoom-us
+
+    ungoogled-chromium
   ];
 }

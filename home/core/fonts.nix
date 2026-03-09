@@ -5,6 +5,7 @@
     noto-fonts-cjk-sans
     noto-fonts-cjk-serif
     nerd-fonts.jetbrains-mono
+    symbola
   ];
   fonts.fontconfig = {
     defaultFonts = {

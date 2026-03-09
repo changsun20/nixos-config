@@ -12,50 +12,7 @@
     ./git.nix
     ./helix.nix
     # ./ollama.nix
-  ];
-  home.packages = with pkgs; [
-    # System tools
-    bat
-    htop
-    btop
-    fastfetch
-    dconf2nix
-    lshw
-    tree
-
-    # Dev tools
-    tree-sitter
-    xh
-    just
-    scc
-    gemini-cli
-    hyperfine
-    ffmpeg
-    gnupg
-
-    # Learning
-    exercism
-
-    # Search tools
-    ripgrep
-    fzf
-    fd
-
-    # Compression tools
-    gzip
-    bzip2
-    xz
-    zip
-    unzip
-    p7zip
-    zstd
-
-    # Backup tools
-    rclone
-    rsync
-
-    # Info tools
-    tlrc
-    kiwix-tools
+    ./packages.nix
+    ./tmux.nix
   ];
 }
