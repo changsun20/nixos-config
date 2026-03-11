@@ -35,8 +35,6 @@
     typescript-language-server
 
     # :term vterm
-    gnumake
-    cmake
     libvterm
     libtool
 

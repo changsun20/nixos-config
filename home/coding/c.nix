@@ -6,10 +6,12 @@
 {
   home.packages = with pkgs; [
     # clang
-    libclang
-    valgrind
-    gdb
+    gnumake
+    cmake
     gcc
+    gdb
+    clang-tools
+    valgrind
   ];
   # programs.gcc.enable = true;
 }

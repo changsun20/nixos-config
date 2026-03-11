@@ -14,7 +14,7 @@
     qalculate-qt
     obsidian
     zotero
-    #libreoffice
+    libreoffice
     bitwarden-desktop
     mullvad-browser
     rssguard
