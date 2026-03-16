@@ -13,5 +13,6 @@
     ./fuzzel.nix
     ./doomemacs.nix
     ./onlyoffice.nix
+    ./foot.nix
   ];
 }
