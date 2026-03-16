@@ -12,6 +12,7 @@
     gdb
     clang-tools
     valgrind
+    neocmakelsp
   ];
   # programs.gcc.enable = true;
 }
