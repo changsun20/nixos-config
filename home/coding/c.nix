@@ -8,8 +8,9 @@
     # clang
     gnumake
     cmake
-    gcc
     gdb
+    clang
+    (lib.hiPrio pkgs.gcc)
     clang-tools
     valgrind
     neocmakelsp
