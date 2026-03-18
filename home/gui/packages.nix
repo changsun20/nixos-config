@@ -19,6 +19,8 @@
     mullvad-browser
     rssguard
 
+    kdePackages.konsole
+
     # Social
     wechat-uos
     signal-desktop

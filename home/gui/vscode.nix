@@ -10,10 +10,12 @@
         tamasfe.even-better-toml
         fill-labs.dependi
         ziglang.vscode-zig
+        vscodevim.vim
+        nomicfoundation.hardhat-solidity
       ];
       userSettings = {
         "files.autoSave" = "onFocusChange";
-        "editor.fontSize" = 19;
+        "editor.fontSize" = 16;
         "window.zoomLevel" = 1;
       };
     };
