@@ -8,6 +8,14 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nvf = {
+      url = "github:NotAShelf/nvf";
+      # You can override the input nixpkgs to follow your system's
+      # instance of nixpkgs. This is safe to do as nvf does not depend
+      # on a binary cache.
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -15,6 +23,7 @@
       self,
       nixpkgs,
       home-manager,
+      nvf,
       ...
     }@inputs:
     let
@@ -36,6 +45,7 @@
               home-manager.extraSpecialArgs = { inherit inputs; };
               home-manager.backupFileExtension = "backup";
             }
+            nvf.nixosModules.default
           ];
         };
     in

@@ -5,5 +5,6 @@
     ./evremap.nix
     ./fish.nix
     ./podman.nix
+    ./nvf.nix
   ];
 }
