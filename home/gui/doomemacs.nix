@@ -31,6 +31,7 @@
     jdt-language-server
     # :lang solidity
     solc
+    prettier
     # :lang typescript
     typescript-language-server
 
