@@ -5,13 +5,12 @@
 }:
 {
   home.packages = with pkgs; [
-    # clang
-    gnumake
-    cmake
-    gdb
     clang
     (lib.hiPrio pkgs.gcc)
+    gnumake
+    cmake
     clang-tools
+    gdb
     valgrind
     neocmakelsp
   ];

@@ -22,6 +22,7 @@
           buildInputs = with pkgs; [
             cmake
             gcc
+            gdb
           ];
         };
       }

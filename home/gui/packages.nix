@@ -16,9 +16,9 @@
     zotero
     libreoffice
     bitwarden-desktop
-    mullvad-browser
     rssguard
 
+    # Development
     kdePackages.konsole
 
     # Social
@@ -27,5 +27,6 @@
     zoom-us
 
     ungoogled-chromium
+    mullvad-browser
   ];
 }
