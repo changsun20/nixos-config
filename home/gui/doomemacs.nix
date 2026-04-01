@@ -25,6 +25,7 @@
     ghostscript
     # :lang markdown
     pandoc
+    go-grip
     # :lang python
     pyright
     # :lang java
