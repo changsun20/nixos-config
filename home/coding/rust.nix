@@ -1,7 +1,10 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    rustup
-    musl
+    cargo
+    rustc
+    clippy
+    rustfmt
+    rust-analyzer
   ];
 }
