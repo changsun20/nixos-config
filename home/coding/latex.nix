@@ -17,6 +17,7 @@ let
       wrapfig
       capt-of
       xecjk
+      soul
     ]
   );
 in
