@@ -5,6 +5,7 @@
     noto-fonts-cjk-sans
     noto-fonts-cjk-serif
     nerd-fonts.jetbrains-mono
+    maple-mono.NF-CN-unhinted
     symbola
   ];
   fonts.fontconfig = {
@@ -17,7 +18,7 @@
         "Noto Sans"
         "Noto Sans CJK SC"
       ];
-      monospace = [ "JetBrainsMono Nerd Font" ];
+      monospace = [ "Maple Mono NF CN" ];
     };
   };
 }
