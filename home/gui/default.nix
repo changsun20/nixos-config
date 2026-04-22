@@ -14,5 +14,6 @@
     ./doomemacs.nix
     ./onlyoffice.nix
     ./foot.nix
+    ./ghostty.nix
   ];
 }
